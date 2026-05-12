@@ -2,9 +2,9 @@ git init
 git config core.fileMode false
 git config core.autocrlf true
 
-Create .gitignore: Add venv/, __pycache__/, .env, and *.log.
+echo "venv/", "__pycache__/", ".env", "*.log" | Out-File -FilePath .gitignore -Encoding utf8
 
-Create .gitattributes: Add the line * text=auto.
+echo "* text=auto" | Out-File -FilePath .gitattributes -Encoding utf8
 
 git add .
 git commit -m "Initial commit: Trading bot base with cross-platform config"
